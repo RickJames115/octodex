@@ -1,8 +1,599 @@
-html {
-  text-size-adjust: 100%;
-}
 
+html {
+    height: 100%;
+}
 body {
-  margin: 0;
-  font: 16px / 1 sans-serif;
+    background-color: #fff;
+    color: #333333;
+    font: 13px/1.4em helvetica,arial,freesans,clean,sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #4183c4;
+    outline: 0 none;
+    text-decoration: none;
+}
+.item a:hover {
+    text-decoration: underline;
+}
+a img {
+    border: medium none;
+}
+p {
+    margin: 0.8em 0;
+}
+p span {
+    color: #777;
+}
+span.header-bg {
+    background-color: #fafafa;
+    background-image: linear-gradient(to bottom, #fafafa, #eaeaea);
+    border-bottom: 1px solid #cacaca;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    height: 47px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#header {
+    background: #f3f3f3 none repeat scroll 0 0;
+    padding: 15px 20px;
+}
+.site-logo {
+    display: block;
+}
+.site-logo img {
+    display: block;
+}
+#header ul.top-nav {
+    float: right;
+    margin-right: 9px;
+    position: relative;
+}
+#header ul.top-nav li {
+    float: left;
+    position: relative;
+}
+#header ul.top-nav li a {
+    color: #000;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 25px;
+    margin-left: 15px;
+}
+#header ul.top-nav li a:hover {
+    color: #4183c4;
+}
+div.breadcrumbs {
+    background: transparent url("../ui/icon-sprites.png") no-repeat scroll 0 36px;
+    clear: both;
+    float: left;
+    font-size: 20px;
+    margin-left: 27px;
+    padding: 32px 0 65px 22px;
+    position: relative;
+}
+div.breadcrumbs span {
+    color: #4183c4;
+}
+div.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+div.breadcrumbs span + span {
+    font-weight: bold;
+}
+ul.sub-nav {
+    clear: both;
+    float: right;
+    margin-right: 27px;
+    padding: 44px 0 60px;
+    position: relative;
+}
+ul.sub-nav li {
+    display: block;
+    float: left;
+    position: relative;
+}
+ul.sub-nav li.btn a, div.cart a.remove, div.cart a#btn-update, div.product span.size-link a {
+    background-clip: padding-box;
+    background-color: #f4f4f4;
+    background-image: -moz-linear-gradient(center top , #f4f4f4, #ececec);
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-shadow: 1px 1px 0 #fff;
+}
+ul.sub-nav li.btn.faq a {
+    margin-right: 0;
+}
+ul.sub-nav li.btn a {
+    padding: 3px 7px 1px 23px;
+}
+div.cart .remove, div.cart a#btn-update {
+    padding: 3px 7px 1px;
+}
+div.product span.size-link a {
+    margin-top: 10px;
+    padding: 3px 7px;
+}
+div.cart a#btn-update {
+    margin: 10px 10px 10px 5px;
+}
+ul.sub-nav li.btn a:hover, div.cart a#btn-update:hover, div.product span.size-link a:hover {
+    background-color: #599bdc;
+    background-image: -moz-linear-gradient(center top , #599bdc, #3072b3);
+    border-color: #518cc6 #518cc6 #2a65a0;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+div.cart .remove:hover {
+    background-color: #e65146;
+    background-image: -moz-linear-gradient(center top , #e65146, #e13734);
+    border-color: #a54034;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+ul.sub-nav li.cart {
+    background: #fff none repeat scroll 0 0;
+    padding: 0;
+}
+ul.sub-nav li.cart span {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: transparent url("../ui/cart.gif") no-repeat scroll 8px 5px padding-box;
+    border-color: #d4d4d4;
+    border-image: none;
+    border-radius: 3px 0 0 3px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    display: inline-block;
+    padding: 3px 7px 2px 25px;
+}
+ul.sub-nav li.cart a {
+    background: #fff none repeat scroll 0 0 padding-box;
+    border: 1px solid #d4d4d4;
+    border-radius: 0 3px 3px 0;
+    color: #666;
+    display: inline-block;
+    padding: 3px 7px 2px;
+    text-shadow: none;
+}
+ul.sub-nav li.cart a:hover {
+    background: #599bdc none repeat scroll 0 0;
+    border-color: #3072b3;
+    color: #fff;
+    text-shadow: none;
+}
+ul.sub-nav li.btn span {
+    background: transparent url("../ui/button-sprites.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 15px;
+    left: 7px;
+    position: absolute;
+    top: 5px;
+    width: 15px;
+}
+ul.sub-nav li.btn.faq span {
+    background-position: 0 -1px;
+}
+ul.sub-nav li.btn.rss span {
+    background-position: -15px 0;
+}
+ul.sub-nav li.btn.terms span {
+    background-position: -30px 0;
+}
+ul.sub-nav li.btn.faq a:hover span {
+    background-position: 0 -17px;
+}
+ul.sub-nav li.btn.rss a:hover span {
+    background-position: -15px -17px;
+}
+ul.sub-nav li.btn.terms a:hover span {
+    background-position: -30px -17px;
+}
+.index div.item-shell {
+    float: left;
+    height: 527px;
+    position: relative;
+    width: 470px;
+}
+.post div.item-shell {
+    display: inline-block;
+}
+.post .item img {
+    max-width: 100%;
+}
+.item {
+    font-size: 12px;
+    margin: 0 9px;
+    overflow: hidden;
+    width: 448px;
+}
+.item-shell .footer {
+    border-bottom: 1px solid #cacaca;
+    color: #666;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 12px 22px;
+    padding: 12px 0;
+    position: relative;
+    text-align: right;
+}
+.item-shell .footer::before {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #cacaca transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 8px;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 7px;
+    top: 0;
+    width: 0;
+}
+.post .item-shell .footer {
+    border: medium none;
+    margin-bottom: 0;
+}
+.item-shell .footer a {
+    color: #333;
+}
+div.item-shell div.footer p {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+div.item-shell div.footer p.number {
+    color: #cacaca;
+    float: left;
+    margin: 5px 0;
+}
+div.item-shell div.footer img {
+    background-clip: padding-box;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+div.item-shell div.footer > a {
+    display: inline-block;
+}
+div.item a {
+    color: #333;
+}
+.index div.list {
+    width: 446px;
+}
+div.item div.shell, div.product div.left-col div.shell, div.cart .shell {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+div.item p {
+    margin: 0;
+}
+div.item div.header, div.product div.left-col div.header, div.cart div.header, div.cart tr.footer, div.size-chart h3 {
+    background-color: #e1e1e1;
+    background-image: -moz-linear-gradient(center top , #f1f1f1, #e1e1e1);
+    border: 1px solid #cacaca;
+    color: #333;
+    font-size: 13px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    text-shadow: 1px 1px 0 #fff;
+}
+div.item div.header .icon, div.product div.header .icon, div.cart .icon {
+    background: transparent url("../ui/icon-sprites.png") no-repeat scroll 0 0;
+    display: block;
+    height: 14px;
+    left: 7px;
+    position: absolute;
+    top: 12px;
+    width: 16px;
+}
+div.item div.header .icon-cup, div.product div.header .icon-cup {
+    background-position: -16px 0;
+}
+div.item div.header .icon-mug, div.product div.header .icon-mug {
+    background-position: -32px 0;
+}
+div.item div.header .icon-clothing, div.product div.header .icon-clothing {
+    background-position: -48px 0;
+}
+div.item div.header .icon-mobile, div.product div.header .icon-mobile {
+    background-position: -64px 0;
+}
+div.item div.header .icon-ipad, div.product div.header .icon-ipad {
+    background-position: -80px 0;
+}
+div.item div.header .icon-desktop, div.product div.header .icon-desktop {
+    background-position: -96px 0;
+}
+div.item div.header .icon-laptop, div.product div.header .icon-laptop {
+    background-position: -112px 0;
+}
+div.item div.header .icon-badge, div.product div.header .ico12n-badge {
+    background-position: -128px 0;
+}
+div.cart .icon-cart {
+    background-position: -144px 0;
+}
+div.item div.header h3, div.product div.left-col div.header h3, div.cart h3 {
+    display: block;
+    margin: 10px 0;
+    overflow: hidden;
+    padding-left: 30px;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+}
+div.size-chart h3 {
+    display: block;
+    overflow: hidden;
+    padding: 10px 0 10px 10px;
+    position: relative;
+    white-space: nowrap;
+}
+div.item div.header a.details, div.cart div.header a.continue {
+    background-color: #eaeaea;
+    background-image: -moz-linear-gradient(center top , #eaeaea, #d6d6d6);
+    border-left: 1px solid #cacaca;
+    color: #666;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+div.item div.header a.details:hover, div.cart div.header a.continue:hover {
+    background-color: #e1e1e1;
+    background-image: -moz-linear-gradient(center top , #e1e1e1, #d1d1d1);
+}
+div.cart div.header a.continue {
+    padding-left: 28px;
+}
+div.cart div.header a.continue span.icon {
+    background-position: -160px 0;
+    display: block;
+    height: 14px;
+    width: 16px;
+}
+div.item .preview-image, div.product div.left-col div.images, .post .item-shell .shell span {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #cacaca;
+    border-radius: 3px;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+    text-align: center;
+}
+.post .item-shell .shell span {
+    padding: 10px;
+}
+div.item.list a.preview-image img {
+    height: 424px;
+    margin: 10px;
+    max-height: 424px;
+    max-width: 424px;
+    width: 424px;
+}
+div.item.page .preview-image img {
+    margin: 20px;
+    max-width: 876px;
+}
+div.item div.footer a.btn-add, div.product div#puchase-form a#btn-add, div.cart div#cart_items a#btn-checkout {
+    background-clip: padding-box;
+    background-color: #36b725;
+    background-image: -moz-linear-gradient(center top , #36b725, #298c1c);
+    border: 1px solid #4a993e;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 8px 8px 8px 0;
+    padding: 3px 7px 1px;
+    position: relative;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+div.item div.footer a.btn-add:hover, div.product div#puchase-form a#btn-add:hover, div.cart div#cart_items a#btn-checkout {
+    background-color: #32ab22;
+    background-image: -moz-linear-gradient(center top , #32ab22, #257d19);
+    border: 1px solid #468f3b;
+}
+#wrapper {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    min-width: 470px;
+    width: 470px;
+}
+.faq #wrapper, .terms #wrapper, .post #wrapper {
+    margin-bottom: 0;
+    width: 940px;
+}
+#not-footer {
+    height: auto;
+    min-height: 100%;
+}
+.content {
+    clear: both;
+    color: #333;
+    display: block;
+    margin: 20px auto 0;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.page {
+    clear: both;
+    color: #333;
+    display: block;
+    margin-left: 9px;
+    margin-top: 20px;
+    overflow: hidden;
+    padding-right: 510px;
+    position: relative;
+    width: 440px;
+    z-index: 2;
+}
+.faq .page {
+    background: transparent url("../ui/joketocat.png") no-repeat scroll 465px 0;
+}
+.terms .page {
+    background: transparent url("../ui/lawctocat.png") no-repeat scroll 465px 0;
+}
+.terms h2 {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.terms h2:first-child {
+    margin-top: 0;
+}
+.page h3 {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.3em;
+    margin-left: 24px;
+}
+.page h3 span {
+    color: #333;
+    margin-left: -24px;
+}
+.page p {
+    margin-bottom: 20px;
+}
+div.faq p a:hover, div.terms p a:hover {
+    text-decoration: underline;
+}
+.hidden {
+    display: none;
+}
+.btn-more, .btn-next, .btn-previous {
+    background-clip: padding-box;
+    background-color: #f4f4f4;
+    background-image: -moz-linear-gradient(center top , #f4f4f4, #ececec);
+    border: 1px solid #d4d4d4;
+    border-radius: 3px;
+    color: #666;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px auto;
+    padding: 10px 0;
+    text-align: center;
+    text-indent: -10px;
+    text-shadow: 1px 1px 0 #fff;
+}
+.btn-more {
+    display: block;
+    width: 470px;
+}
+.btn-next, .btn-previous {
+    margin: 0 5px;
+    padding: 3px 8px 5px;
+}
+.btn-disabled {
+    background-clip: padding-box;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #ddd;
+    cursor: default;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+    padding: 3px 8px 5px;
+    text-align: center;
+}
+a.btn-more:hover, .btn-next:hover, .btn-previous:hover {
+    background-color: #eee;
+    background-image: -moz-linear-gradient(center top , #eee, #ddd);
+    text-decoration: none !important;
+}
+.octo-title {
+    color: #333;
+}
+.octoID {
+    color: #ccc;
+    float: left;
+    position: relative;
+    top: 5px;
+}
+#spinner {
+    display: block;
+    height: 18px;
+    margin: 20px auto;
+    position: relative;
+    width: 18px;
+}
+.pagination {
+    color: #666;
+    display: block;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+.spacer {
+    display: block;
+    height: 165px;
+}
+#infscr-loading {
+    color: #666;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px auto 40px;
+    position: relative;
+    text-align: center;
+}
+#infscr-loading img {
+    display: none;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+.masonry {
+    transition-duration: 0.5s;
+}
+.masonry .masonry-brick {
+    transition-duration: 1s;
+}
+.masonry {
+    transition-property: height, width;
+}
+div.item-shell.masonry-brick {
+    opacity: 1;
+    transition-property: opacity;
 }
